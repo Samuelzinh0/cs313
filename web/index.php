@@ -12,10 +12,14 @@
     <div class="text-center">
     <h1> Welcome to the Homepage </h1>
         <div class="btn-group">
-            <button type="button" href="index.php" class="btn">Home</button>
-            <button type="button" href="intro.php" class="btn btn-success">Introduction</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/assign.php';" class="btn btn-danger">Assignments</button>
-            <button type="button" href="pproject/index.php" class="btn btn-primary disabled">Final Project</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/index.php';"
+                class="btn">Home</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/intro.php';"
+                class="btn btn-success">Introduction</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/assign.php';" 
+                class="btn btn-danger">Assignments</button>
+            <button type="button"onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
+                class="btn btn-primary disabled">Final Project</button>
         </div>
         <h2> This is the homepage of the website created by Sam Moreira. 
                 Feel free to explore the inner working of his mind.</h2>

@@ -11,29 +11,47 @@
     <body>
     <div class="text-center">
     <h1> Welcome to the Assignments Page </h1>
-        <div class="btn-group">
-            <button type="button" href="index.php" class="btn">Home</button>
-            <button type="button" href="intro.php" class="btn btn-success">Introduction</button>
-            <button type="button" href="assigns/assign.php" class="btn btn-danger">Assignments</button>
-            <button type="button" href="pproject/index.php" class="btn btn-primary disabled">Final Project</button>
+    <div class="btn-group">
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/index.php';"
+                class="btn">Home</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/intro.php';"
+                class="btn btn-success">Introduction</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/assign.php';" 
+                class="btn btn-danger">Assignments</button>
+            <button type="button"onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
+                class="btn btn-primary disabled">Final Project</button>
         </div>
-        <h2> This is the homepage of the website created by Sam Moreira. 
-                Feel free to explore the inner working of his mind.</h2>
-        <div class="btn-group">
-            <button type="button" href="hello.html" class="btn">Week 1 </button>
-            <button type="button" href="hello.html" class="btn">Week 2 </button>
-            <button type="button" href="hello.html" class="btn">Week 3 </button>
-            <button type="button" href="hello.html" class="btn">Week 4 </button>
-            <button type="button" href="hello.html" class="btn">Week 5 </button>
-            <button type="button" href="hello.html" class="btn">Week 6 </button>
-            <button type="button" href="hello.html" class="btn">Week 7 </button>
-            <button type="button" href="hello.html" class="btn">Week 8 Hello World</button>
-            <button type="button" href="hello.html" class="btn">Week 9 Hello World</button>
-            <button type="button" href="hello.html" class="btn">Week 10 Hello World</button>
-            <button type="button" href="hello.html" class="btn">Week 11 Hello World</button>
-            <button type="button" href="hello.html" class="btn">Week 12 Hello World</button>
-            <button type="button" href="hello.html" class="btn">Week 13 Hello World</button>
-            <button type="button" href="pproject/index.php" class="btn btn-primary disabled">Final Project</button>
+        <h2> Below you will find the indiviual assignments done throughout the semester.</h2>
+        
+        <div class="btn-list">
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/hello.html';"
+                class="btn btn-dark">W1 Hello World</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W2 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W3 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W4 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W5 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W6 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W7 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W8 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W9 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W10 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W11 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W12 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
+                class="btn btn-dark disabled">W13 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
+                class="btn btn-dark disabled">Final Project</button>
         </div>
     </div>
 
