@@ -12,9 +12,9 @@
     <div class="text-center">
     <h1> Welcome to the Assignments Page </h1>
         <div class="btn-group">
-            <button type="button" href="homepage.html" class="btn">Home</button>
-            <button type="button" href="intro.html" class="btn btn-success">Introduction</button>
-            <button type="button" href="assigns/assign.html" class="btn btn-danger">Assignments</button>
+            <button type="button" href="index.php" class="btn">Home</button>
+            <button type="button" href="intro.php" class="btn btn-success">Introduction</button>
+            <button type="button" href="assigns/assign.php" class="btn btn-danger">Assignments</button>
             <button type="button" href="pproject/index.php" class="btn btn-primary disabled">Final Project</button>
         </div>
         <h2> This is the homepage of the website created by Sam Moreira. 
