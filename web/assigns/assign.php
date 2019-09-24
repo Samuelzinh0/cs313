@@ -24,7 +24,7 @@
         <h2> Below you will find the indiviual assignments done throughout the semester.</h2>
         
         <div class="btn-list">
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/w1hello.html';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/w1hello.html';"
                 class="btn btn-dark">W1 Hello World</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
                 class="btn btn-dark disabled">W2 ---</button>
