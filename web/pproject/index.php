@@ -13,7 +13,7 @@
     <h1> Welcome to Accent Curbing </h1>
     <h3> This is the homepage of the website. Here you can find different information about the services we provide.</h3>
         <div class="btn-group">
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/ppropject/index.php';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
               class="btn btn-dark">Home Page</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pastjobs.php';"
               class="btn btn-light">Past Jobs</button>
