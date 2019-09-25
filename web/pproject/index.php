@@ -13,13 +13,13 @@
     <h1> Welcome to Accent Curbing </h1>
     <h3> This is the homepage of the website. Here you can find different information about the services we provide.</h3>
         <div class="btn-group">
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/index.php';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/ppropject/index.php';"
               class="btn btn-dark">Home Page</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pastjobs.php';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pastjobs.php';"
               class="btn btn-light">Past Jobs</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pricing.php';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pricing.php';"
               class="btn btn-light">Pricing</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/reviews.php';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/reviews.php';"
               class="btn btn-light">Reviews</button>
         </div>
         <p> Feel free to leave a review of the services you have received from us!</p>
