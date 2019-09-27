@@ -28,6 +28,8 @@
     <?php
     echo "Today's date is " . date("d-m-Y") . "<br>";
     ?>
+
+    <img src="images/sam1.jpg" alt="Website Creator">
     
     </body>
 </html>
