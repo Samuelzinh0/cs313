@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="stylist.css">
     </head>
     <title>Accent Curbing</title>
-    <img src="images/curbing1.jpg" width="100" height="50" alt="Curbing Job Example">
+    <img src="images/curbing1.jpg" width="400" height="300" alt="Curbing Job Example">
     <body>
     <div class="text-center">
     <h1> Welcome to Accent Curbing </h1>

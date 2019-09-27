@@ -31,7 +31,7 @@
         of this webpage from left to right Pedro my older brother, my father Laurentino, me, my wife Kendra, and my mother Elizette.</p>
     </div>
 
-    <img src="images/sam2.jpg" width="100" height="50" alt="Website Creator">
+    <img src="images/sam2.jpg" width="400" height="300" alt="Website Creator">
     <?php
     echo "Today's date is " . date("d-m-Y") . "<br>";
     ?>
