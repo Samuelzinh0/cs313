@@ -1,6 +1,6 @@
-
 img { 
-	max-width: 100%;
+    width: 100px;
+    height: 75px;
 	}
 img.thumbnail { 
 	width: 100px;
