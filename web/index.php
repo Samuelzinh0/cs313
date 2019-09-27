@@ -29,7 +29,7 @@
     echo "Today's date is " . date("d-m-Y") . "<br>";
     ?>
 
-    <img src="images/sam1.jpg" style="img" alt="Website Creator">
+    <img src="images/sam1.jpg" width="100" height="50" alt="Website Creator">
     
     </body>
 </html>
