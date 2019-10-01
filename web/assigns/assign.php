@@ -26,10 +26,10 @@
         <div class="btn-list">
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/w1hello.html';"
                 class="btn btn-dark">W1 Hello World</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
-                class="btn btn-dark disabled">W2 ---</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
-                class="btn btn-dark disabled">W3 ---</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/index.php';"
+                class="btn btn-dark disabled">W2 PHP D/T</button>
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/w3shopping.php';"
+                class="btn btn-dark disabled">W3 Cart</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
                 class="btn btn-dark disabled">W4 ---</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
