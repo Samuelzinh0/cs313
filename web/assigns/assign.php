@@ -37,7 +37,7 @@
                 onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/index.php';"
                 class="btn btn-dark">W2 PHP D/T</button>
             <button type="button"
-                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/w3shopping.php';"
+                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/week03/w3shopping.php';"
                 class="btn btn-dark">W3 Cart</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
                 class="btn btn-dark disabled">W4 ---</button>
