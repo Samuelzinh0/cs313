@@ -65,7 +65,7 @@
         </div>
         <h2> Below you will find the <b>team</b> assignments done throughout the semester.</h2>
         <div class="btn-list">
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/ta03.php';"
+            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/team/ta03.php';"
                 class="btn btn-dark">W3 Forms</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
                 class="btn btn-dark disabled">W4 ---</button>
