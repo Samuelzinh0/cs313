@@ -27,7 +27,7 @@
                 onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
                 class="btn btn-primary disabled">Final Project</button>
             <button type="button"
-                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/test/simple-php-shopping-cart/index.php';"
+                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/test/index.php';"
                 class="btn btn-primary disabled">Test</button>
         </div>
         <h2> Below you will find the indiviual assignments done throughout the semester.</h2>

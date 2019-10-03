@@ -1,178 +1,42 @@
+<?php
+
+?>
 <!DOCTYPE html>
-
 <html>
+    <head>
+        <title>Shopping Cart</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+    <body>
+        <br />
+        <div class="container" style="width:700px;">
+            <h3 align="center">Shopping Cart</h3><br />
+            <?php
+            $query = "SELECT * FROM tbl_product ORDER BY id ASC";
+            $result = mysqli_query($connect, $query);
+            if(mysqli_num_rows($result) > 0)
+            {
+                while($row = mysqli_fetch_array))
+                {
+            ?>
+            <div class="col-md-4">
+                    <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
+                    </form>
+					    <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
+                        <img src="images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+                        <h4 class="text-info"><?php echo $row["name"]; ?></h4>
+                        <h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
+                        <input type="text" name="quantity" value="1" class="form-control" />
+                        <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+                        <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylist.css">
-</head>
-<title>Sam Moreira</title>
-
-<body>
-    <div class="text-center">
-        <h1> Welcome to the Shopping Cart Assignement </h1>
-        <div class="btn-group">
-            <button type="button"
-                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/index.php';"
-                class="btn">Home</button>
-            <button type="button"
-                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/intro.php';"
-                class="btn btn-success">Introduction</button>
-            <button type="button"
-                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/assign.php';"
-                class="btn btn-danger">Assignments</button>
-            <button type="button"
-                onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
-                class="btn btn-primary disabled">Final Project</button>
-        </div>
-        <h2> Below you will find the assignment of Week 3 the Shopping Cart.</h2>
-        <?php
-            session_start();
-            require_once("dbcontroller.php");
-            $db_handle = new DBController();
-            if(!empty($_GET["action"])) {
-                switch($_GET["action"]) {
-                    case "add":
-                        if(!empty($_POST["quantity"])) {
-                            $productByCode = $db_handle->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
-                            $itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 
-                            'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 
-                            'image'=>$productByCode[0]["image"]));
-                
-                        if(!empty($_SESSION["cart_item"])) {
-                            if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
-                                foreach($_SESSION["cart_item"] as $k => $v) {
-                                    if($productByCode[0]["code"] == $k) {
-                                        if(empty($_SESSION["cart_item"][$k]["quantity"])) {
-                                            $_SESSION["cart_item"][$k]["quantity"] = 0;
-                                        }
-                                        $_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
-                                    }
-                                }
-                            } else {
-                                $_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
-                            }
-                        } else {
-                            $_SESSION["cart_item"] = $itemArray;
-                            }
-                        }
-                    break;
-                    case "remove":
-                        if(!empty($_SESSION["cart_item"])) {
-                            foreach($_SESSION["cart_item"] as $k => $v) {
-                                if($_GET["code"] == $k)
-                                    unset($_SESSION["cart_item"][$k]);				
-                                if(empty($_SESSION["cart_item"]))
-                                    unset($_SESSION["cart_item"]);
-                            }
-                        }
-                    break;
-                    case "empty":
-                        unset($_SESSION["cart_item"]);
-                    break;	
                 }
             }
-        ?>
-        <HTML>
-
-        <head>
-            <TITLE>Simple PHP Shopping Cart</TITLE>
-            <link href="style.css" type="text/css" rel="stylesheet" />
-        </head>
-
-        <BODY>
-            <div id="shopping-cart">
-                <div class="txt-heading">Shopping Cart</div>
-
-                <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a>
-                <?php
-                if(isset($_SESSION["cart_item"])){
-                    $total_quantity = 0;
-                    $total_price = 0;
-                ?>
-                <table class="tbl-cart" cellpadding="10" cellspacing="1">
-                    <tbody>
-                        <tr>
-                            <th style="text-align:left;">Name</th>
-                            <th style="text-align:left;">Code</th>
-                            <th style="text-align:right;" width="5%">Quantity</th>
-                            <th style="text-align:right;" width="10%">Unit Price</th>
-                            <th style="text-align:right;" width="10%">Price</th>
-                            <th style="text-align:center;" width="5%">Remove</th>
-                        </tr>
-                        <?php		
-                        foreach ($_SESSION["cart_item"] as $item){
-                            $item_price = $item["quantity"]*$item["price"];
-		                ?>
-                        <tr>
-                            <td><img src="<?php echo $item["image"]; ?>"
-                                    class="cart-item-image" /><?php echo $item["name"]; ?></td>
-                            <td><?php echo $item["code"]; ?></td>
-                            <td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
-                            <td style="text-align:right;"><?php echo "$ ".$item["price"]; ?></td>
-                            <td style="text-align:right;"><?php echo "$ ". number_format($item_price,2); ?></td>
-                            <td style="text-align:center;"><a
-                                    href="index.php?action=remove&code=<?php echo $item["code"]; ?>"
-                                    class="btnRemoveAction"><img src="icon-delete.png" alt="Remove Item" /></a></td>
-                        </tr>
-                        <?php
-				            $total_quantity += $item["quantity"];
-				            $total_price += ($item["price"]*$item["quantity"]);
-                        ?>
-                        }
-
-                        <tr>
-                            <td colspan="2" align="right">Total:</td>
-                            <td align="right"><?php echo $total_quantity; ?></td>
-                            <td align="right" colspan="2">
-                                <strong><?php echo "$ ".number_format($total_price, 2); ?></strong></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <?php
-                } else {
-                ?>
-                <div class="no-records">There are no items in your cart.</div>
-                <?php 
-                }
-                ?>
-            </div>
-
-            <div id="product-grid">
-                <div class="txt-heading">Products</div>
-                <?php
-	                $product_array = $db_handle->runQuery("SELECT * FROM tblproduct ORDER BY id ASC");
-	                if (!empty($product_array)) { 
-		                foreach($product_array as $key=>$value){
-	            ?>
-                    <div class="product-item">
-                    <form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-                        <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
-                        <div class="product-tile-footer">
-                            <div class="product-title"><?php echo $product_array[$key]["name"]; ?></div>
-                            <div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
-                            <div class="cart-action"><input type="text" class="product-quantity" name="quantity"
-                                    value="1" size="2" /><input type="submit" value="Add to Cart"
-                                    class="btnAddAction" /></div>
-                        </div>
-                    </form>
-                </div>
-                <?php
-		}
-	}
-	?>
-            </div>
-
-
-    </div>
-
-    <?php
-    echo "Today's date is " . date("d-m-Y") . "<br>";
-    ?>
-
-</body>
-
+            ?>
+        </div>
+        <br />
+    </body>
 </html>
