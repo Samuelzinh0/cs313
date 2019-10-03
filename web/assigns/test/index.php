@@ -1,112 +1,86 @@
 <?php
+
 session_start();
-include_once("config.php");
+
+require_once ('php/CreateDb.php');
+require_once ('./php/component.php');
 
 
-//current URL of the Page. cart_update.php redirects back to this URL
-$current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+// create instance of Createdb class
+$database = new CreateDb("Productdb", "Producttb");
+
+if (isset($_POST['add'])){
+    /// print_r($_POST['product_id']);
+    if(isset($_SESSION['cart'])){
+
+        $item_array_id = array_column($_SESSION['cart'], "product_id");
+
+        if(in_array($_POST['product_id'], $item_array_id)){
+            echo "<script>alert('Product is already added in the cart..!')</script>";
+            echo "<script>window.location = 'index.php'</script>";
+        }else{
+
+            $count = count($_SESSION['cart']);
+            $item_array = array(
+                'product_id' => $_POST['product_id']
+            );
+
+            $_SESSION['cart'][$count] = $item_array;
+        }
+
+    }else{
+
+        $item_array = array(
+                'product_id' => $_POST['product_id']
+        );
+
+        // Create new session variable
+        $_SESSION['cart'][0] = $item_array;
+        print_r($_SESSION['cart']);
+    }
+}
+
+
 ?>
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Shopping Cart</title>
-<link href="style/style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 align="center">Products </h1>
 
-<!-- View Cart Box Start -->
-<?php
-if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"])>0)
-{
-	echo '<div class="cart-view-table-front" id="view-cart">';
-	echo '<h3>Your Shopping Cart</h3>';
-	echo '<form method="post" action="cart_update.php">';
-	echo '<table width="100%"  cellpadding="6" cellspacing="0">';
-	echo '<tbody>';
-
-	$total =0;
-	$b = 0;
-	foreach ($_SESSION["cart_products"] as $cart_itm)
-	{
-		$product_name = $cart_itm["product_name"];
-		$product_qty = $cart_itm["product_qty"];
-		$product_price = $cart_itm["product_price"];
-		$product_code = $cart_itm["product_code"];
-		$product_color = $cart_itm["product_color"];
-		$bg_color = ($b++%2==1) ? 'odd' : 'even'; //zebra stripe
-		echo '<tr class="'.$bg_color.'">';
-		echo '<td>Qty <input type="text" size="2" maxlength="2" name="product_qty['.$product_code.']" value="'.$product_qty.'" /></td>';
-		echo '<td>'.$product_name.'</td>';
-		echo '<td><input type="checkbox" name="remove_code[]" value="'.$product_code.'" /> Remove</td>';
-		echo '</tr>';
-		$subtotal = ($product_price * $product_qty);
-		$total = ($total + $subtotal);
-	}
-	echo '<td colspan="4">';
-	echo '<button type="submit">Update</button><a href="view_cart.php" class="button">Checkout</a>';
-	echo '</td>';
-	echo '</tbody>';
-	echo '</table>';
-	
-	$current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-	echo '<input type="hidden" name="return_url" value="'.$current_url.'" />';
-	echo '</form>';
-	echo '</div>';
-
-}
-?>
-<!-- View Cart Box End -->
+<?php require_once ("php/header.php"); ?>
+<div class="container">
+        <div class="row text-center py-5">
+            <?php
+                $result = $database->getData();
+                while ($row = mysqli_fetch_assoc($result)){
+                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+                }
+            ?>
+        </div>
+</div>
 
 
-<!-- Products List Start -->
-<?php
-$results = $mysqli->query("SELECT product_code, product_name, product_desc, product_img_name, price FROM products ORDER BY id ASC");
-if($results){ 
-$products_item = '<ul class="products">';
-//fetch results set as object and output HTML
-while($obj = $results->fetch_object())
-{
-$products_item .= <<<EOT
-	<li class="product">
-	<form method="post" action="cart_update.php">
-	<div class="product-content"><h3>{$obj->product_name}</h3>
-	<div class="product-thumb"><img src="images/{$obj->product_img_name}"></div>
-	<div class="product-desc">{$obj->product_desc}</div>
-	<div class="product-info">
-	Price {$currency}{$obj->price} 
-	
-	<fieldset>
-	
-	<label>
-		<span>Color</span>
-		<select name="product_color">
-		<option value="Black">Black</option>
-		<option value="Silver">Silver</option>
-		</select>
-	</label>
-	
-	<label>
-		<span>Quantity</span>
-		<input type="text" size="2" maxlength="2" name="product_qty" value="1" />
-	</label>
-	
-	</fieldset>
-	<input type="hidden" name="product_code" value="{$obj->product_code}" />
-	<input type="hidden" name="type" value="add" />
-	<input type="hidden" name="return_url" value="{$current_url}" />
-	<div align="center"><button type="submit" class="add_to_cart">Add</button></div>
-	</div></div>
-	</form>
-	</li>
-EOT;
-}
-$products_item .= '</ul>';
-echo $products_item;
-}
-?>    
-<!-- Products List End -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
