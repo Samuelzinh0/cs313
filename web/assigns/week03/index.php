@@ -3,11 +3,11 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
-<TITLE>PHP Shopping Cart without Database</TITLE>
+<TITLE>Week 03 Shopping Cart</TITLE>
 <link href="style.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<h1>Demo Shopping Cart without Database</h1>
+<h1>PHP Shopping Cart</h1>
 <?php 
 require_once "product-gallery.php";
 ?>

@@ -4,26 +4,26 @@ class Product
 {
 
     public $productArray = array(
-        "3DcAM01" => array(
+        "Moulding01" => array(
             'id' => '1',
-            'name' => '3D Camera',
+            'name' => 'Angle Mold',
             'code' => '3DcAM01',
-            'image' => 'product-images/camera.jpg',
-            'price' => '1500.00'
+            'image' => 'product-images/mold01.jpg',
+            'price' => '100.00'
         ),
-        "USB02" => array(
+        "Moulding02" => array(
             'id' => '2',
-            'name' => 'External Hard Drive',
+            'name' => 'Dome Mold',
             'code' => 'USB02',
-            'image' => 'product-images/external-hard-drive.jpg',
-            'price' => '800.00'
+            'image' => 'product-images/mold02.jpg',
+            'price' => '500.00'
         ),
-        "wristWear03" => array(
+        "Moulding03" => array(
             'id' => '3',
-            'name' => 'Wrist Watch',
+            'name' => 'Mower Mold',
             'code' => 'wristWear03',
-            'image' => 'product-images/watch.jpg',
-            'price' => '300.00'
+            'image' => 'product-images/mold03.jpg',
+            'price' => '1000.00'
         )
     );
 
