@@ -46,7 +46,7 @@ switch($_POST["action"]) {
 if(isset($_SESSION["cart_item"])){
     $item_total = 0;
 ?>	
-<table class="tutorial-table">
+<table class="table">
 <tbody>
 <tr>
 <th><strong>Name</strong></th>

@@ -37,8 +37,8 @@ body {
 }
 
 .product-image {
-    height: 100px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     background-color: #FFF;
     text-align: center;
     border: #e8e7e7 1px solid;
@@ -56,7 +56,7 @@ body {
     cursor: pointer;
 }
 
-.tutorial-table {
+.table {
     width: 100%;
     font-size: 0.9em;
     border-spacing: initial;
@@ -65,17 +65,17 @@ body {
     table-layout: auto;
 }
 
-.tutorial-table th {
+.table th {
     background-color: #f5f5f5;
     padding: 5px;
     text-align: left;
 }
 
-.tutorial-table th.align-right {
+.table th.align-right {
     text-align: right;
 }
 
-.tutorial-table td {
+.table td {
     border-bottom: #f0f0f0 1px solid;
     background-color: #ffffff;
     padding: 5px;
