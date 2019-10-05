@@ -2,7 +2,7 @@ body {
     font-family: Arial;
     max-width:550px;
 }
-.text-heading {
+.txt-heading {
     padding: 5px 10px;
     font-size: 1.1em;
     background: #E2E2E2;
@@ -56,7 +56,7 @@ body {
     cursor: pointer;
 }
 
-.table {
+.tutorial-table {
     width: 100%;
     font-size: 0.9em;
     border-spacing: initial;
@@ -65,17 +65,17 @@ body {
     table-layout: auto;
 }
 
-.table th {
+.tutorial-table th {
     background-color: #f5f5f5;
     padding: 5px;
     text-align: left;
 }
 
-.table th.align-right {
+.tutorial-table th.align-right {
     text-align: right;
 }
 
-.table td {
+.tutorial-table td {
     border-bottom: #f0f0f0 1px solid;
     background-color: #ffffff;
     padding: 5px;
