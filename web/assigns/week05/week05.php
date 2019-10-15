@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<h1>test</h1>
 <?php
   $temp_comment_title;
   $temp_comment_text;
