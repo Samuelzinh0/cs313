@@ -20,12 +20,12 @@
   $temp_comment_title;
   $temp_comment_text;
   $temp_users_id;
+
   foreach ($comment_infos as $comment_info) {
-    /*$id = $comment_info['users_id'];
+    $id = $comment_info['users_id'];
     global $temp_comment_title, $temp_comment_text, $temp_users_id;
     $temp_comment_title = $comment_info['comment_title'];
-    $temp_comment_text = $comment_info['comment_text'];*/
-    }
+    $temp_comment_text = $comment_info['comment_text'];
   }
 
   echo "<br><br>";
