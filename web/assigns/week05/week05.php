@@ -17,7 +17,7 @@
 <body>
 <h1>test</h1>
 <?php
-  $temp_comment_title;
+  /*$temp_comment_title;
   $temp_comment_text;
   $temp_users_id;
   foreach ($comment_infos as $comment_info) {
@@ -33,7 +33,7 @@
   echo "<p><pre>$temp_comment_title</pre><p>";
   echo "<br>";
   echo "<p><pre> Comment: $temp_comment_text</pre></p>";
-  echo "<br>";
+  echo "<br>";*/
 ?>
 
 </body>
