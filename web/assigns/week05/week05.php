@@ -1,10 +1,10 @@
-<?php /*
+<?php
   require('dbConnect.php');
   $db = get_db();
   $query = 'SELECT comment_title, comment_text, users_id FROM comments';
   $stmt = $db->prepare($query);
   $stmt->execute();
-  $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC); */
+  $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
