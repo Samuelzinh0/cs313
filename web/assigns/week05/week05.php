@@ -26,14 +26,14 @@
     $temp_comment_title = $comment_info['comment_title'];
     $temp_comment_text = $comment_info['comment_text'];
     }
-  }
+  }*/
 
   echo "<br><br>";
   echo "<h3>Reviews</h3>";
   echo "<p><pre>$temp_comment_title</pre><p>";
   echo "<br>";
   echo "<p><pre> Comment: $temp_comment_text</pre></p>";
-  echo "<br>";*/
+  echo "<br>";
 ?>
 
 </body>
