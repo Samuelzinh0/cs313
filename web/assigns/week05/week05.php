@@ -5,9 +5,9 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  vardump(comment_infos);
+  /*vardump(comment_infos);
 
-  /*$query = 'SELECT rating, users_id FROM ratings';
+  $query = 'SELECT rating, users_id FROM ratings';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $rating_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
