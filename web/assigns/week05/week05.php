@@ -10,7 +10,6 @@
 <!DOCTYPE html>
 <html lang="eng">
 
-
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -19,55 +18,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<div class="jumbotron text-center">
-<h1>Pulling Information from my Database</h1>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3></h3>
-      <p>Reviews</p>
-      <?php
-  echo "<h3>Reviews</h3>";
-  $temp_comment_title;
+  <div class="jumbotron text-center">
+    <h1>Pulling Information from my Database</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3></h3>
+        <p>Reviews</p>
+        <?php
+        $temp_comment_title;
 
-  foreach ($comment_infos as $comment_info) {
-    $id = $comment_info['users_id'];
-    global $temp_comment_title, $temp_comment_text, $temp_users_id;
-    $temp_comment_title = $comment_info['comment_title'];
-    $temp_comment_text = $comment_info['comment_text'];
-    echo "<br><br>";
-    echo "<p><pre>$temp_comment_title</pre><p>";
-    echo "<br>";
-    echo "<p><pre> Comment: $temp_comment_text</pre></p>";
-    echo "<br>";
-  }
-?>
-
+        foreach ($comment_infos as $comment_info) {
+          $id = $comment_info['users_id'];
+          global $temp_comment_title, $temp_comment_text, $temp_users_id;
+          $temp_comment_title = $comment_info['comment_title'];
+          $temp_comment_text = $comment_info['comment_text'];
+          echo "<br><br>";
+          echo "<p><pre>$temp_comment_title</pre><p>";
+          echo "<br>";
+          echo "<p><pre> Comment: $temp_comment_text</pre></p>";
+          echo "<br>";
+          }
+        ?>
+      </div>
     </div>
   </div>
-</div>
-<?php
-/*
-  echo "<h3>Reviews</h3>";
-  $temp_comment_title;
-
-  foreach ($comment_infos as $comment_info) {
-    $id = $comment_info['users_id'];
-    global $temp_comment_title, $temp_comment_text, $temp_users_id;
-    $temp_comment_title = $comment_info['comment_title'];
-    $temp_comment_text = $comment_info['comment_text'];
-    echo "<br><br>";
-    echo "<p><pre>$temp_comment_title</pre><p>";
-    echo "<br>";
-    echo "<p><pre> Comment: $temp_comment_text</pre></p>";
-    echo "<br>";
-  }
-*/
-?>
 
 </body>
-
 </html>
