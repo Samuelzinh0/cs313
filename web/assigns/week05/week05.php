@@ -2,7 +2,7 @@
   require('dbConnect.php');
   $db = get_db();
   $query = 'SELECT comment_title, comment_text, users_id FROM comments';
-  $query = 'SELECT rating, users_id FROM ratings';
+  /*$query = 'SELECT rating, users_id FROM ratings';*/
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,13 +32,13 @@
         <p>Reviews</p>
         <?php
         $temp_comment_title;
-        $temp_comment_rating;
+        /*$temp_comment_rating;*/
         foreach ($comment_infos as $comment_info) {
           $id = $comment_info['users_id'];
           global $temp_comment_title, $temp_comment_text, $temp_users_id;
           $temp_comment_title = $comment_info['comment_title'];
           $temp_comment_text = $comment_info['comment_text'];
-          $temp_comment_rating = $comment_info['rating'];
+          /*$temp_comment_rating = $comment_info['rating'];*/
           echo "<br><br>";
           echo "<p><pre>$temp_comment_title</pre><p>";
           echo "<br>";
