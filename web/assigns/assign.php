@@ -42,10 +42,9 @@
             <button type="button"
                 onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/week03/index.php';"
                 class="btn btn-dark">W3 Cart</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
-                class="btn btn-dark disabled">W4 ---</button>
+            <button type="button" class="btn btn-dark">W4 Making a DB (No Webpage)</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/assigns/week05/week05.php';"
-                class="btn btn-dark disabled">W5 DB Info</button>
+                class="btn btn-dark">W5 DB Info</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
                 class="btn btn-dark disabled">W6 ---</button>
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/...';"
