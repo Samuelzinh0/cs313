@@ -13,12 +13,13 @@
   $rating_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
   vardump(rating_infos);
   
-  $query = 'SELECT user_name, users_id FROM users';
+  /*$query = 'SELECT user_name, users_id FROM users';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $users_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  vardump(users_infos);
+  vardump(users_infos);*/
 ?>
+
 <!DOCTYPE html>
 <html lang="eng">
 
