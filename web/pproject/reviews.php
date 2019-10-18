@@ -26,7 +26,7 @@
 <body>
 
   <div class="jumbotron text-center">
-    <h1>Pulling Information from my Database</h1>
+    <h1>Welcome to the Review Page!</h1>
   </div>
   <div class="container">
     <div class="row">

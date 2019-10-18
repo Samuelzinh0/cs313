@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylist.css">
-    </head>
-    <title>Accent Curbing</title>
+<head>
+  <title>A.C: Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<div class="jumbotron text-center">
+    <h1>Welcome to Accent Curbing!</h1>
+  </div>
     <img src="curbing1.jpg" width="400" height="300" alt="Curbing Job Example">
     <body>
     <div class="text-center">
-    <h1> Welcome to Accent Curbing </h1>
     <h3> This is the homepage of the website. Here you can find different information about the services we provide.</h3>
         <div class="btn-group">
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
