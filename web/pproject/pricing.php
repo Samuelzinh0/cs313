@@ -29,19 +29,9 @@
     </ul>
   </div>
 </nav>
-        <div class="btn-group">
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
-              class="btn btn-dark">Home Page</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pastjobs.php';"
-              class="btn btn-light">Past Jobs</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pricing.php';"
-              class="btn btn-light">Pricing</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/reviews.php';"
-              class="btn btn-light">Reviews</button>
-        </div>
-        <h2> Due to the fluctuation of the land that we build our curbing on and the preparation work needed for the diversity of jobs 
-            we are ale to offer we don't have an explicit flat rate. You as our prized customer needs to call our Owner to set up a time to have him come and do the preparation 
-            work and give you an accurate estimation for the job requested. His contact information is 208-???-???? </h2>
+    <h2> Due to the fluctuation of the land that we build our curbing on and the preparation work needed for the diversity of jobs 
+          we are ale to offer we don't have an explicit flat rate. You as our prized customer needs to call our Owner to set up a time to have him come and do the preparation 
+          work and give you an accurate estimation for the job requested. His contact information is 208-???-???? </h2>
     </div>
 
     <?php

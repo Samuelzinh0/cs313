@@ -15,20 +15,23 @@
   <div class="jumbotron text-center">
     <h1>Welcome to the Past Jobs Page!</h1>
   </div>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Accent Curbing</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="index.php"><a href="#">Home</a></li>
+      <li><a href="pastjobs.php">Past Jobs</a></li>
+      <li><a href="pricing.php">Pricing</a></li>
+      <li><a href="reviews.php">Reviews</a></li>
+    </ul>
+  </div>
+</nav>
+
     <div class="text-center">
     <h3> This is a sneak peak at the past jobs we have completed.</h3>
-        <div class="btn-group">
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/index.php';"
-              class="btn btn-dark">Home Page</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pastjobs.php';"
-              class="btn btn-light">Past Jobs</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/pricing.php';"
-              class="btn btn-light">Pricing</button>
-            <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/reviews.php';"
-              class="btn btn-light">Reviews</button>
-        </div>
-        <p> Feel free to leave a review of the services you have received from us!</p>
-        
+    <p> Feel free to leave a review of the services you have received from us!</p>    
     </div>
 
     <?php
