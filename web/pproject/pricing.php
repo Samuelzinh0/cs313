@@ -26,9 +26,9 @@
             <button type="button" onclick="window.location.href = 'https://young-escarpment-18200.herokuapp.com/pproject/reviews.php';"
               class="btn btn-light">Reviews</button>
         </div>
-        <p> Due to the fluctuation of the land that we build our curbing on and the preparation work needed for the diversity of jobs 
-            we are ale to do you as our prized customer needs to call our Owner to set up a time ot have him come and do the preparation 
-            work and give you an accurate estimation for the job requested. </p>
+        <h2> Due to the fluctuation of the land that we build our curbing on and the preparation work needed for the diversity of jobs 
+            we are ale to offer we don't have an explicit flat rate. You as our prized customer needs to call our Owner to set up a time to have him come and do the preparation 
+            work and give you an accurate estimation for the job requested. His contact information is 208-???-???? </h2>
     </div>
 
     <?php
