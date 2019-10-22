@@ -68,11 +68,12 @@
           $temp_comment_title = $comment_info['comment_title'];
           $temp_comment_text = $comment_info['comment_text'];
           $temp_comment_rating = $comment_info['rating'];
+          $temp_comment_person = $comment_info['user_name'];
 
           echo "<br><br>";
-          echo "<p><pre>$temp_comment_title, $temp_comment_rating</pre></p>";
+          echo "<p><pre>$temp_comment_title Rating: $temp_comment_rating/5 </pre></p>";
           echo "<br>";
-          echo "<p><pre> Comment: $temp_comment_text</pre></p>";
+          echo "<p><pre> $temp_comment_person: $temp_comment_text</pre></p>";
           echo "<br>";
           }
         ?>
