@@ -30,3 +30,38 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+<body>
+<form action="bobTheQueryBuilder()" method="get"><br>
+  Book:    <input type="text"  id="book"><br>
+  Chapter: <input type="text"  id="chapter"><br>
+  Verse:   <input type="text"  id="verse"><br>
+  Content: <br><textarea rows="10" cols="50" id="content"></textarea><br>
+  <input type="submit">
+</form>
+
+<script>
+  function bobTheQueryBuilder() {
+    var book = document.getElementById('book').value;
+    var chapter = document.getElementById('chapter').value;
+    var verse = document.getElementById('verse').value;
+    var content = document.getElementById('content').value;
+
+    var query=`write.php?book=${book}&chapter=${chapter}&verse=${verse}&content=${content}`;
+    
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {}
+    }
+    xhr.open("POST", query, false);
+    xhr.send();
+  }
+</script>
+
+</body>
+</html>
