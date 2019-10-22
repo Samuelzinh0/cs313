@@ -65,14 +65,12 @@
 
         foreach ($comment_infos as $comment_info) {
           $id = $comment_info['users_id'];
-          //global $temp_comment_title, $temp_comment_text, $temp_users_id, $temp_comment_rating;
           $temp_comment_title = $comment_info['comment_title'];
           $temp_comment_text = $comment_info['comment_text'];
           $temp_comment_rating = $comment_info['rating'];
 
           echo "<br><br>";
-          echo "<p><pre>$temp_comment_title</pre></p>";
-          echo "<p><pre>$temp_comment_rating</pre></p>";
+          echo "<p><pre>$temp_comment_title, $temp_comment_rating</pre></p>";
           echo "<br>";
           echo "<p><pre> Comment: $temp_comment_text</pre></p>";
           echo "<br>";
