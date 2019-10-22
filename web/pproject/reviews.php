@@ -6,7 +6,7 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+  /*
   $query = 'SELECT * FROM ratings';
   $stmt = $db->prepare($query);
   $ratings_number = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -19,7 +19,7 @@
   $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($person_name as $person_names) {
     $current_user = $person_names['user_name'];
-  }
+  }*/
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +52,13 @@
     </ul>
   </div>
 </nav>
+
+<form action="" method="get"><br>
+  User name: <input type="text"  name="book"><br>
+  Review Comment: <br><textarea rows="10" cols="50" name="content"></textarea><br>
+  <input type="submit">
+</form>
+
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
