@@ -70,8 +70,8 @@
           $temp_comment_text = $comment_info['comment_text'];
           $temp_comment_rating = $ratings_number['rating'];
           echo "<br><br>";
-          echo "<p><pre>$temp_comment_title</pre><p>";
-          echo "<p>$temp_comment_rating<p>";
+          echo "<p><pre>$temp_comment_title</pre></p>";
+          echo "<p>$temp_comment_rating</p>";
           echo "<br>";
           echo "<p><pre> Comment: $temp_comment_text</pre></p>";
           echo "<br>";
