@@ -11,12 +11,10 @@
   $stmt = $db->prepare($query);
   $ratings_number = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  /*$query = 'SELECT * FROM users';
+  $query = 'SELECT user_name FROM users';
   $stmt = $db->prepare($query);
   $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  foreach($person_name as $person_names) {
-    $current_user = $person_names['user_name'];
-  }*/
+  
 ?>
 
 <!DOCTYPE html>
