@@ -2,11 +2,11 @@
   require('dbConnect.php');
   $db = get_db();
   
-  $query = 'SELECT comment_title, comment_text, users_id FROM comments;';
+  $query='SELECT comment_title, comment_text, comments.users_id, rating, user_name FROM comments, ratings, users WHERE comments.users_id=users.id AND ratings.users_id=users.id;';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+/*
   $query = 'SELECT rating, users_id FROM ratings';
   $stmt = $db->prepare($query);
   $stmt->execute();
@@ -16,7 +16,7 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  
+  */
 ?>
 
 <!DOCTYPE html>
@@ -65,10 +65,11 @@
 
         foreach ($comment_infos as $comment_info) {
           $id = $comment_info['users_id'];
-          global $temp_comment_title, $temp_comment_text, $temp_users_id, $temp_comment_rating;
+          //global $temp_comment_title, $temp_comment_text, $temp_users_id, $temp_comment_rating;
           $temp_comment_title = $comment_info['comment_title'];
           $temp_comment_text = $comment_info['comment_text'];
-          $temp_comment_rating = $ratings_number['rating'];
+          $temp_comment_rating = $comment_info['rating'];
+
           echo "<br><br>";
           echo "<p><pre>$temp_comment_title</pre></p>";
           echo "<p><pre>$temp_comment_rating</pre></p>";
