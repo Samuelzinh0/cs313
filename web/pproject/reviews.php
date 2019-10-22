@@ -6,15 +6,12 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  /*
-  $query = 'SELECT * FROM ratings';
+
+  $query = 'SELECT rating, users_id FROM ratings';
   $stmt = $db->prepare($query);
   $ratings_number = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  foreach($ratings_number as $ratings_num) {
-    $current_rating = $ratings_num['rating']
-  }
 
-  $query = 'SELECT * FROM users';
+  /*$query = 'SELECT * FROM users';
   $stmt = $db->prepare($query);
   $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach($person_name as $person_names) {
