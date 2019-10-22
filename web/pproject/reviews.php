@@ -4,15 +4,17 @@
   
   $query = 'SELECT comment_title, comment_text, users_id FROM comments;';
   $stmt = $db->prepare($query);
-  //$stmt->execute();
+  $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   $query = 'SELECT rating, users_id FROM ratings';
   $stmt = $db->prepare($query);
+  $stmt->execute();
   $ratings_number = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   $query = 'SELECT user_name FROM users';
   $stmt = $db->prepare($query);
+  $stmt->execute();
   $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
   
 ?>
