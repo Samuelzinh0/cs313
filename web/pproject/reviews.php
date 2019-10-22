@@ -1,14 +1,25 @@
 <?php
   require('dbConnect.php');
   $db = get_db();
+  
   $query = 'SELECT comment_title, comment_text, users_id FROM comments;';
-  /*$query .= 'SELECT rating, users_id FROM ratings;';
-  $query .= 'SELECT user_name, users_id FROM users;';*/
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  //vardump(comment_infos);
 
+  $query = 'SELECT * FROM ratings';
+  $stmt = $db->prepare($query);
+  $ratings_number = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach($ratings_number as $ratings_num) {
+    $current_rating = $ratings_num['rating']
+  }
+
+  $query = 'SELECT * FROM users';
+  $stmt = $db->prepare($query);
+  $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach($person_name as $person_names) {
+    $current_user = $person_names['user_name'];
+  }
 ?>
 
 <!DOCTYPE html>
