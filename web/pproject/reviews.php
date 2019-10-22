@@ -6,17 +6,6 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-/*
-  $query = 'SELECT rating, users_id FROM ratings';
-  $stmt = $db->prepare($query);
-  $stmt->execute();
-  $ratings_number = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-  $query = 'SELECT user_name FROM users';
-  $stmt = $db->prepare($query);
-  $stmt->execute();
-  $person_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  */
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +39,29 @@
   </div>
 </nav>
 
-<form action="" method="get"><br>
-  User name: <input type="text"  name="book"><br>
-  Review Comment: <br><textarea rows="10" cols="50" name="content"></textarea><br>
+<?php
+/*
+  function insertInfo($comment_user_name, $comment_rating, $comment_text, $comment_user_type, $comment_title, $users_id) {
+    $query = "INSERT INTO users (user_name, user_type) VALUES ($comment_user_name, $comment_user_type)";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $query = "INSERT INTO ratings (rating, users_id) VALUES ($comment_rating, $users_id);";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $query = "INSERT INTO comments (comment_title, comment_text, users_id) VALUES ($comment_title, $comment_text, $users_id)";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+  }
+  */
+?>
+
+<form action="insertInfo" method="get"><br>
+  User name: <input type="text" name="user_name"><br>
+  <input type="radio" name="user_type" value="Homeowner"> Homeowner<br>
+  <input type="radio" name="user_type" value="lDesigner"> Landscape Designer<br>
+  Rating: <input type="text" name="comment_rating"><br>
+  Review Title: <input type="text" name="comment_title"><br> 
+  Review Comment: <br><textarea rows="10" cols="50" name="comment_content"></textarea><br>
   <input type="submit">
 </form>
 
