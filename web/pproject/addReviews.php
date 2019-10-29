@@ -31,7 +31,7 @@
 
             $update_query = 'INSERT INTO ratings (rating) VALUES (:rating_review) ';
             $stmt = $db->prepare($update_query);
-            $stmt->bindValue(':rating_review', $reting_review);
+            $stmt->bindValue(':rating_review', $rating_review);
             $stmt->execute();
 
 
