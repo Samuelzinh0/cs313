@@ -60,18 +60,15 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="userType">Type of User:</label>
-    <select class="form-control" id="userType" name="userType">
-      <option>Landscape Designer</option>
-      <option>Homeowner</option>
-    </select>
+    <label for="userType">User type:</label>
+    <input type="text" class="form-control" id="userType" name="userType" placeholder="(Landscape Designer/Homeowner)">
   </div>
   <div class="form-group">
     <label for="commentContent">Review Content:</label>
     <textarea class="form-control" id="commentContent" name="commentContent" rows="3"></textarea>
   </div>
 
-  <input type="submit" value="addReview">
+  <input type="submit" value="Add Review">
 </form>
 
   <div class="container">

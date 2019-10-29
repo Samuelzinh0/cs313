@@ -1,9 +1,9 @@
 <?php
     $name_user = $_POST['nameOfUser'];
-    $title_review = $_POST['reviewTitle'];
-    $rating_review = $_POST['reviewRating'];
+    //$title_review = $_POST['reviewTitle'];
+    //$rating_review = $_POST['reviewRating'];
     $type_user = $_POST['userType'];
-    $content_comment = $_POST['commentContent'];
+    //$content_comment = $_POST['commentContent'];
 
     require('dbconnect.php');
 
