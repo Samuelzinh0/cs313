@@ -39,35 +39,19 @@
   </div>
 </nav>
 
-<?php
-/*
-  function insertInfo($comment_user_name, $comment_rating, $comment_text, $comment_user_type, $comment_title, $users_id) {
-    $query = "INSERT INTO users (user_name, user_type) VALUES ($comment_user_name, $comment_user_type)";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $query = "INSERT INTO ratings (rating, users_id) VALUES ($comment_rating, $users_id);";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $query = "INSERT INTO comments (comment_title, comment_text, users_id) VALUES ($comment_title, $comment_text, $users_id)";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-  }
-  */
-?>
-
 <form action="insertInfo" method="get" style="margin-left:5%; margin-right:5%">
   <h2>Write Your Review Here!</h2>
   <div class="form-group">
     <label for="nameOfUser">User name:</label>
-    <input type="text" class="form-control" id="nameOfUser" placeholder="(Your name here)">
+    <input type="text" class="form-control" id="nameOfUser" name="nameOfUser" placeholder="(Your name here)">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Review Title:</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(Your review title here)">
+    <label for="reviewTitle">Review Title:</label>
+    <input type="text" class="form-control" id="reviewTitle" name="reviewTitle" placeholder="(Your review title here)">
   </div>
   <div class="form-group">
     <label for="reviewRating">Review Rating:</label>
-    <select class="form-control" id="reviewRating">
+    <select class="form-control" id="reviewRating" name="reviewRating">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -77,16 +61,17 @@
   </div>
   <div class="form-group">
     <label for="userType">Type of User:</label>
-    <select class="form-control" id="userType">
+    <select class="form-control" id="userType" name="userType">
       <option>Landscape Designer</option>
       <option>Homeowner</option>
     </select>
   </div>
   <div class="form-group">
     <label for="commentContent">Review Content:</label>
-    <textarea class="form-control" id="commentContent" rows="3"></textarea>
+    <textarea class="form-control" id="commentContent" name="commentContent" rows="3"></textarea>
   </div>
-  <input type="submit">
+
+  <input type="submit" value="addReview">
 </form>
 
   <div class="container">
