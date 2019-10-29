@@ -85,15 +85,6 @@
     <label for="commentContent">Review Content:</label>
     <textarea class="form-control" id="commentContent" rows="3"></textarea>
   </div>
-</form>
-
-<form action="insertInfo" method="get"><br>
-  User name: <input type="text" name="user_name"><br>
-  <input type="radio" name="user_type" value="Homeowner"> Homeowner<br>
-  <input type="radio" name="user_type" value="lDesigner"> Landscape Designer<br>
-  Rating: <input type="text" name="comment_rating"><br>
-  Review Title: <input type="text" name="comment_title"><br> 
-  Review Comment: <br><textarea rows="10" cols="50" name="comment_content"></textarea><br>
   <input type="submit">
 </form>
 
