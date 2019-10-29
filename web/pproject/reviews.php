@@ -104,9 +104,9 @@
           $temp_comment_person = $comment_info['user_name'];
 
           echo "<br><br>";
-          echo "<p><pre>$temp_comment_title Rating: $temp_comment_rating/5 </pre></p>";
+          echo "<p>$temp_comment_title Rating: $temp_comment_rating/5 </p>";
           echo "<br>";
-          echo "<p><pre> $temp_comment_person: $temp_comment_text</pre></p>";
+          echo "<p> $temp_comment_person: $temp_comment_text</p>";
           echo "<br>";
           }
         ?>
