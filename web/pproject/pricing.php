@@ -30,7 +30,7 @@
   </div>
 </nav>
     <h2> Due to the fluctuation of the land that we build our curbing on and the preparation work needed for the diversity of jobs 
-          we are ale to offer we don't have an explicit flat rate. You as our prized customer needs to call our Owner to set up a time to have him come and do the preparation 
+          we are able to offer we don't have an explicit flat rate. You as our prized customer needs to call our Owner to set up a time to have him come and do the preparation 
           work and give you an accurate estimation for the job requested. His contact information is 208-???-???? </h2>
     </div>
 
