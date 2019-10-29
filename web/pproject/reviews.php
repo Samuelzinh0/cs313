@@ -76,18 +76,19 @@
         <h3>Already Written Reviews</h3>
 
         <?php
-
+        vardump($comment_infos);
         foreach ($comment_infos as $comment_info) {
           $id = $comment_info['users_id'];
           $temp_comment_title = $comment_info['comment_title'];
           $temp_comment_text = $comment_info['comment_text'];
           $temp_comment_rating = $comment_info['rating'];
           $temp_comment_person = $comment_info['user_name'];
+          $temp_comment_user_type = $comment_info['user_type'];
 
           
           echo '<div style="border:1px solid grey; border-radius:3px">';
           echo "<p> $temp_comment_title Rating: $temp_comment_rating/5</p>";
-          echo "<br>";
+          echo "<p> $temp_comment_user_type</p>";
           echo "<p> $temp_comment_person: $temp_comment_text</p>";
           echo "</div><br>";
           }
