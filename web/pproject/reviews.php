@@ -39,7 +39,7 @@
   </div>
 </nav>
 
-<form action="insertInfo" method="get" style="margin-left:5%; margin-right:5%">
+<form action="addReviews.php" method="POST" style="margin-left:5%; margin-right:5%">
   <h2>Write Your Review Here!</h2>
   <div class="form-group">
     <label for="nameOfUser">User name:</label>
