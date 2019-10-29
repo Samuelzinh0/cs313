@@ -2,7 +2,7 @@
   require('dbConnect.php');
   $db = get_db();
   
-  $query='SELECT comment_title, comment_text, comments.users_id, rating, user_name FROM comments, ratings, users WHERE comments.users_id=users.id AND ratings.users_id=users.id;';
+  $query='SELECT * FROM comments, ratings, users WHERE comments.users_id=users.id AND ratings.users_id=users.id;';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $comment_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
