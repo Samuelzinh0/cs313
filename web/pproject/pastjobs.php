@@ -21,8 +21,8 @@
       <a class="navbar-brand" href="index.php">Accent Curbing</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php">Home</a></li>
-      <li><a href="pastjobs.php">Past Jobs</a></li>
+      <li><a href="index.php">Home</a></li>
+      <li class="active"><a href="pastjobs.php">Past Jobs</a></li>
       <li><a href="pricing.php">Pricing</a></li>
       <li><a href="reviews.php">Reviews</a></li>
     </ul>
