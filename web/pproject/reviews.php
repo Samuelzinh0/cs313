@@ -76,7 +76,7 @@
         <h3>Already Written Reviews</h3>
 
         <?php
-        var_dump($comment_infos);
+        
         foreach ($comment_infos as $comment_info) {
           $id = $comment_info['users_id'];
           $temp_comment_title = $comment_info['comment_title'];
