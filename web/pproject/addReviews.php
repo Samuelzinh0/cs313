@@ -17,13 +17,11 @@
     
     try {
         // check for change in available credit
-        if ($name_user != 0) {
             $update_query = 'INSERT INTO users (user_name, user_type) VALUES (:name_user, :type_user) ';
             $stmt = $db->prepare($update_query);
             $stmt->bindValue(':name_user', $name_user);
             $stmt->bindValue(':type_user', $type_user);
             $stmt->execute();
-        }
 
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
