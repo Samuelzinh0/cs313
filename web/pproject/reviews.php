@@ -92,7 +92,8 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <h3>Already Written Reviews</h3>
+        <h3 style="margin-left:0px">Already Written Reviews</h3>
+
         <?php
 
         foreach ($comment_infos as $comment_info) {
