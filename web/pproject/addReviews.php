@@ -9,14 +9,7 @@
 
     $db = get_db();
     
-    /*
-    INSERT INTO users (user_name, user_type) VALUES ('Sam', 'Homeowner');
-    INSERT INTO comments (comment_title, comment_text, users_id) VALUES ('Quick Workers!', 'I was wondering if it would be a day job and we decided it would be and it worked out great! Good professionalism as well!', 1);
-    INSERT INTO ratings (rating, users_id) VALUES (5, 2);
-    */
-    
     try {
-        // check for change in available credit
             $update_query = 'INSERT INTO users (user_name, user_type) VALUES (:name_user, :type_user) ';
             $stmt = $db->prepare($update_query);
             $stmt->bindValue(':name_user', $name_user);
@@ -33,9 +26,7 @@
             $stmt = $db->prepare($update_query);
             $stmt->bindValue(':rating_review', $rating_review);
             $stmt->execute();
-
-
-
+            
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
         die();
