@@ -55,7 +55,8 @@
   */
 ?>
 
-<form action="insertInfo" method="get">
+<h2>Write Your Review Here!</h2>
+<form action="insertInfo" method="get" style="margin-left:5px">
   <div class="form-group">
     <label for="nameOfUser">User name:</label>
     <input type="text" class="form-control" id="nameOfUser" placeholder="(Your name here)">
