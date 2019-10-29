@@ -55,8 +55,8 @@
   */
 ?>
 
-<h2>Write Your Review Here!</h2>
 <form action="insertInfo" method="get" style="margin-left:5%; margin-right:5%">
+  <h2>Write Your Review Here!</h2>
   <div class="form-group">
     <label for="nameOfUser">User name:</label>
     <input type="text" class="form-control" id="nameOfUser" placeholder="(Your name here)">
@@ -92,7 +92,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <h3 style="margin-left:0px">Already Written Reviews</h3>
+        <h3>Already Written Reviews</h3>
 
         <?php
 
