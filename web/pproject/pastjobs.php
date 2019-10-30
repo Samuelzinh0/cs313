@@ -34,6 +34,53 @@
     <p> Feel free to leave a review of the services you have received from us!</p>    
     </div>
 
+    <div class="container">
+    <h2>Past Jobs Are Shown Here</h2>
+    <p>Click on the images to enlarge them.</p>
+  
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="curbing1.jpg" target="_blank">
+              <img src="/w3images/lights.jpg" alt="Past Job 1" style="width:100%">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="curbing2.jpg" target="_blank">
+              <img src="curbing2.jpg" alt="Past Job 2" style="width:100%">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="curbing3.jpg" target="_blank">
+              <img src="curbing3.jpg" alt="Past Job 3" style="width:100%">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="curbing4.jpg" target="_blank">
+              <img src="curbing4.jpg" alt="Past Job 4" style="width:100%">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="curbing5.jpg" target="_blank">
+              <img src="curbing5.jpg" alt="Past Job 4" style="width:100%">
+            </a>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
     <?php
     echo "Today's date is " . date("d-m-Y") . "<br>";
     ?>
