@@ -33,7 +33,7 @@
           we are able to offer we don't have an explicit flat rate. You as our prized customer needs to call our Owner to set up a time to have him come and do the preparation 
           work and give you an accurate estimation for the job requested. His contact information is 208-???-???? </h2>
     
-    <img src="curbs_group1.jpg" width="50%" height="50%" alt="Home Page Job Example 3">
+    <img src="curbs_group1.jpg" width="50%" height="50%" alt="Molds Example">
     </div>
 
 
