@@ -15,7 +15,6 @@
     <h1>Welcome to the Pricing Page!</h1>
   </div>
     <div class="text-center">
-    <h3> We will showcase the different moulding we use.</h3>
     <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
