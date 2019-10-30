@@ -29,13 +29,18 @@
 </body>
 </html>
 
-    <p> Feel free to leave a review of the services you have received from us!</p> 
-    
+    <p> Feel free to leave a review of the services you have received from us!</p>
     <body>
     <div class="text-center">
     <h3> This is the homepage of the website. Here you can find different information about the services we provide.</h3>
     <p> Feel free to leave a review of the services you have received from us!</p>
-        
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="ACLogo.png" target="_blank">
+            <img src="ACLogo.png" alt="Logo" style="width:100%">
+          </a>
+        </div>
+      </div>    
     </div>
 
     <?php
