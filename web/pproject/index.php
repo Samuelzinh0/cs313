@@ -25,9 +25,9 @@
     </ul>
   </div>
 </nav>
-    <img src="curbing1.jpg" width="400" height="300" alt="Curbing Job Example">
-    <img src="curbing1.jpg" width="400" height="300" alt="Curbing Job Example">
-    <img src="curbing1.jpg" width="400" height="300" alt="Curbing Job Example">
+    <img src="curbing1.jpg" width="400" height="300" alt="Home Page Job Example 1">
+    <img src="curbing2.jpg" width="400" height="300" alt="Home Page Job Example 2">
+    <img src="curbing3.jpg" width="400" height="300" alt="Home Page Job Example 3">
     <body>
     <div class="text-center">
     <h3> This is the homepage of the website. Here you can find different information about the services we provide.</h3>
