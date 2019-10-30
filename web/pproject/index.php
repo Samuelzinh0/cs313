@@ -29,9 +29,8 @@
 </body>
 </html>
 
-    <img src="curbing1.jpg" width="400" height="300" alt="Home Page Job Example 1">
-    <img src="curbing2.jpg" width="400" height="300" alt="Home Page Job Example 2">
-    <img src="curbing3.jpg" width="400" height="300" alt="Home Page Job Example 3">
+    <p> Feel free to leave a review of the services you have received from us!</p> 
+    
     <body>
     <div class="text-center">
     <h3> This is the homepage of the website. Here you can find different information about the services we provide.</h3>

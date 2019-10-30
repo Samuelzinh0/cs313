@@ -30,8 +30,7 @@
 </nav>
 
     <div class="text-center">
-    <h3> This is a sneak peak at the past jobs we have completed.</h3>
-    <p> Feel free to leave a review of the services you have received from us!</p>    
+    <h3> This is a sneak peak at the past jobs we have completed.</h3>   
     </div>
 
     <div class="container">
@@ -42,7 +41,7 @@
         <div class="col-md-4">
           <div class="thumbnail">
             <a href="curbing1.jpg" target="_blank">
-              <img src="/w3images/lights.jpg" alt="Past Job 1" style="width:100%">
+              <img src="curbing1.jpg" alt="Past Job 1" style="width:100%">
             </a>
           </div>
         </div>
