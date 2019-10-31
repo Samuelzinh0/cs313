@@ -85,7 +85,7 @@
           $temp_comment_person = $comment_info['user_name'];
           
           echo '<div style="border:1px solid grey; border-radius:3px">';
-          echo '<p style="margin-left:5px>' .$temp_comment_title .'Rating: ' .$temp_comment_rating.'/5</p>';
+          echo '<p style="margin-left:5px">' .$temp_comment_title.'Rating: ' .$temp_comment_rating.'/5</p>';
           echo "<p> $temp_comment_person: $temp_comment_text</p>";
           echo "</div><br>";
           }
