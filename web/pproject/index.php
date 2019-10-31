@@ -43,9 +43,15 @@
       </div>    
     </div>
 
-    <?php
-    echo "Today's date is " . date("d-m-Y") . "<br>";
-    ?>
-    
+    <div class="container">
+    <h1>Business Information:</h1>
+    <pre>
+    Decorative Concrete Curbing.
+    Reinforced with fiberglass mesh.
+    Three styles to choose from.
+    Have your curbing stamped and colored.
+    Fifteen years of experience.
+    </pre>
+    </div>
     </body>
 </html>
