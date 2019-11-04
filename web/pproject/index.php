@@ -41,7 +41,7 @@
     <pre>
     Decorative Concrete Curbing.
     Reinforced with fiberglass mesh.
-    Three styles to choose from.
+    Four styles to choose from.
     Have your curbing stamped and colored.
     Fifteen years of experience.</pre>
     </div>
